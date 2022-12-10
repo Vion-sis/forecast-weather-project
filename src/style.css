@@ -90,3 +90,24 @@ a {
 .active:hover {
   text-decoration: none;
 }
+.forecast {
+  color: #f9f7fe;
+}
+.icon {
+  display: block;
+  position: relative;
+  top: 0px;
+  left: -5px;
+  margin: 0px;
+}
+.forecast {
+  display: block;
+  padding: 10px;
+  margin: 0px;
+}
+.temperature {
+  opacity: 0.5;
+}
+.day {
+  opacity: 0.5;
+}
