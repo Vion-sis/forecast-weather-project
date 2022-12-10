@@ -1,0 +1,92 @@
+body {
+  background-size: 100%;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/057/309/original/background.jpeg?1670554169");
+  font-family: "Urbanist", sans-serif;
+  padding: 100px 50px;
+}
+h1 {
+  font-weight: 700;
+  font-family: Google Sans, arial, sans-serif;
+  color: #e8eaed;
+  font-size: 22px;
+  line-height: 26px;
+  display: block;
+  text-align: right;
+  margin-bottom: 0px;
+}
+ul {
+  list-style: none;
+  display: inline;
+  margin-top: 0px;
+}
+img {
+  position: relative;
+  top: -15px;
+}
+small {
+  color: #e8eaed;
+  display: block;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
+.header {
+  display: block;
+  margin-bottom: -20px;
+  position: relative;
+  left: -10px;
+}
+.vanilla-app {
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #27296d;
+  border-radius: 25px;
+  background: #202124;
+  max-width: 650px;
+  width: 100%;
+  padding: 50px 50px;
+  box-sizing: border-box;
+}
+
+.col-9 {
+  background: #f9f7fe;
+  border: none;
+  border-radius: 6px;
+  color: rgba(39, 33, 66, 0.4);
+  display: inline-block;
+  font-size: 16px;
+  height: 50px;
+  line-height: 20px;
+  padding: 15px 20px;
+}
+.details {
+  color: #878787;
+}
+.temp {
+  color: #e8eaed;
+  font-size: 48px;
+}
+.units {
+  font-size: 16px;
+  position: relative;
+  top: -20px;
+  left: 0px;
+}
+.more.details {
+  display: block;
+  text-align: right;
+  text-transform: capitalize;
+}
+.right.details {
+  display: block;
+  margin-top: 0px;
+  padding: 0px;
+}
+.active {
+  color: #878787;
+  cursor: default;
+}
+.active:hover {
+  text-decoration: none;
+}
