@@ -1,7 +1,28 @@
+function displayWeatherForecast() {
+  let forecastElement = document.querySelector("#weather-forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tue", "Wed"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `   <div class="col-2">
+                            <span class="day">${day}</span> 
+                            <img class="icon" src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="" width="50px">
+                            <span > 18° /</span> <span class="temperature">11°</span> 
+                </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function getCoordinates(coordinates) {
-  let apiKey = "4091b06da263484df848822445999498";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  let coordinatesLat = coordinates.lat;
+  let coordinatesLon = coordinates.lon;
+  let apiKey = "44091b06da263484df848822445999498";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${coordinatesLat}&lon=${coordinatesLon}&cnt=7&appid=${apiKey}&units=metric`;
   axios.get(`${apiUrl}`).then(displayWeatherForecast);
+  console.log(apiUrl);
 }
 
 function showCurrentTemperature(response) {
@@ -32,7 +53,8 @@ function showCurrentTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 
-  getCoordinates(response.data.coord);
+  let coordinates = response.data.coord;
+  getCoordinates(coordinates);
 }
 
 function search(cityName) {
@@ -64,24 +86,6 @@ function showCelciusTemperature(event) {
 
   let currentTemperature = document.querySelector("#current-temp");
   currentTemperature.innerHTML = celciusTemperature;
-}
-
-function displayWeatherForecast() {
-  let forecastElement = document.querySelector("#weather-forecast");
-
-  let forecastHTML = `<div class="row">`;
-  let days = ["Sun", "Mon", "Tue", "Wed"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `   <div class="col-2">
-                            <span class="day">${day}</span> 
-                            <img class="icon" src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="" width="50px">
-                            <span > 18° /</span> <span class="temperature">11°</span> 
-                </div>`;
-  });
-  forecastHTML = forecastHTML + `</div>`;
-  forecastElement.innerHTML = forecastHTML;
 }
 
 let celciusTemperature = null;
