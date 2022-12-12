@@ -42,7 +42,7 @@ a {
   margin: 0 auto;
   border: 2px solid #27296d;
   border-radius: 25px;
-  background: #202124;
+  background: linear-gradient(rgb(48, 83, 133), #ffa09c);
   max-width: 650px;
   width: 100%;
   padding: 50px 50px;
@@ -61,7 +61,7 @@ a {
   padding: 15px 20px;
 }
 .details {
-  color: #878787;
+  color: rgb(244, 235, 235);
 }
 .temp {
   color: #e8eaed;
@@ -84,7 +84,7 @@ a {
   padding: 0px;
 }
 .active {
-  color: #878787;
+  color: #202124;
   cursor: default;
 }
 .active:hover {
